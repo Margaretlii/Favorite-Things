@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+</head>
+<body>
+<h1>What Can JavaScript Do?</h1>
+
+<script type="text/javascript">
+//console.log('Hi Penguins');
+
+var numberOfPenguins=3;
+var species = "Rockhopper";
+species +=" Penguins ";
+var fishPerPenguin = 5;
+var totalFish = numberOfPenguins * fishPerPenguin;
+//alert(totalFish+" total fish");
+
+function penguinFact()
+{
+	console.log('Penguins live only in the Southern Hemisphere.');
+}
+penguinFact();
+penguinFact();
+penguinFact();
+
+function changeText()
+{
+	// save user input in a variable
+var inputText = document.getElementById('theInput').value;
+// change html content to whatever the user input
+document.getElementsByTagName('demo').innerHTML =
+inputText;
+console.log(inputText);
+}
+
+function favoritePenguin (species, count)
+{
+	console.log("My favorite type of penguin is the "+species+" Penguin. I have "+count+" "+species+"s");
+}
+favoritePenguin ('Gentoo',5);
+favoritePenguin ("Emporer", 3);
+
+function square (num)
+{
+	return num * num;
+}
+console.log(square(4));
+console.log(square(5));
+var finalAnswer = square(10);
+console.log(finalAnswer);
+
+var penguinsAreAwesome = true;
+var penguinsCanFly = false;
+if(!penguinsAreAwesome) {
+	console.log("yay! for penguins!");
+
+}
+if (!penguinsCanFly) {
+	console.log("Wheeeee!");
+}
+var numberOfPenguins=3;
+if (numberOfPenguins==0){
+	console.log("we have penguins");
+}
+
+else {
+	console.log("no penguins : ("); 
+}
+</script>
+<p id="demo">waiting for user input...</p>
+	<input type='text' id='theInput'/>
+	<button onclick='changeText()'>Enter Text</button>
+<button onclick="document.write(5+6)">Try it</button> 
+<button type="button" onclick=penguinFact()>Where do penguins live? </button>
+
+	
+
+
+</body>
+
+</html>
